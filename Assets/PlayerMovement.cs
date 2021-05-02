@@ -41,13 +41,22 @@ public class PlayerMovement : MonoBehaviour
 		{
 			if(controller.isGrounded)
 			{
+				// Stopping - not pressing W or S
+				if (!Input.GetKey(KeyCode.W) || !Input.GetKey(KeyCode.S))
+				{
+					anim.SetBool("walking", false);
+					anim.SetInteger("condition", 0); // Idle animation
+
+					moveDir = Vector3.zero;
+				}
+
 				// Moving forward - pressing W
 				if (Input.GetKey(KeyCode.W))
 				{
 					anim.SetBool("walking", true);
 					anim.SetInteger("condition", 1); // walking animation
 
-					moveDir = new Vector3(0,0,1);
+					moveDir = Vector3.forward;
 					moveDir *= speed;
 					
 					// Running - pressing left shift
@@ -69,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
 					anim.SetBool("walking", true);
 					anim.SetInteger("condition", 1); // walking animation
 
-					moveDir = new Vector3(0,0,-1);
+					moveDir = Vector3.back;
 					moveDir *= speed;
 					moveDir = transform.TransformDirection(moveDir);
 					
@@ -81,19 +90,10 @@ public class PlayerMovement : MonoBehaviour
 					anim.SetBool("walking", false);
 					anim.SetInteger("condition", 0);
 
-					moveDir = new Vector3(0, 1, 0);
-					moveDir *= speed;
-					moveDir = transform.TransformDirection(moveDir);
+					Vector3 jumpDir = Vector3.up * speed;
+					moveDir += jumpDir;
 				}
 
-				// Stopping - releasing
-				if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
-				{
-					anim.SetBool("walking", false);
-					anim.SetInteger("condition", 0); // Idle animation
-
-					moveDir = new Vector3(0,0,0);
-				} 
 			}
 		}
 
@@ -110,36 +110,34 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if(controller.isGrounded)
 		{
+
+			if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+			{
+				anim.SetBool("walking", false);
+				anim.SetBool("running", false);
+				anim.SetInteger("condition", 0); // Idle animation
+				moveDir = Vector3.zero;
+			}
 			// If left mouse is pressed, it'll attack as long as it's not walking
 			if (Input.GetMouseButtonDown(0))
-			{	
-				if(anim.GetBool("walking") || anim.GetBool("running"))
-				{
-					anim.SetBool("walking", false);
-					anim.SetBool("running", false);
-					anim.SetInteger("condition", 0); // Idle animation
-				}
-				if (!anim.GetBool("walking") && !anim.GetBool("running"))
-				{
-					Attack();
-				}
+			{
+				Attack();
 			}
 			// If right mouse is pressed, it'll defend as long as it's not walking
-			if (Input.GetMouseButtonDown(1))
+			if (Input.GetMouseButton(1))
 			{	
-				if(anim.GetBool("walking") || anim.GetBool("running"))
-				{
-					anim.SetBool("walking", false);
-					anim.SetBool("running", false);
-					anim.SetInteger("condition", 0); // Idle animation
-				}
-				if (!anim.GetBool("walking") && !anim.GetBool("running"))
-				{
-					Defend();
-				}
+				Defend();
+			}
+
+			if (Input.GetMouseButtonUp(1))
+			{
+				anim.SetBool("defending", false);
+				anim.SetInteger("condition", 0);
 			}
 		}
 	}
+
+	/* Attacking */
 
 	void Attack()
 	{
@@ -157,6 +155,10 @@ public class PlayerMovement : MonoBehaviour
 		anim.SetBool("attacking", false);
 	}
 
+	/* end of attacking */
+
+	/* Defending */
+
 	void Defend()
 	{
 		StartCoroutine(DefendRoutine());
@@ -169,7 +171,7 @@ public class PlayerMovement : MonoBehaviour
 
 		yield return new WaitForSeconds(0.9f);
 
-		anim.SetInteger("condition", 0);
-		anim.SetBool("defending", false);
 	}
+
+	/* end of defending */
 }
