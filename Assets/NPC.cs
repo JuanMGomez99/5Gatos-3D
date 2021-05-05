@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class NPC : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class NPC : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		Console.Write(anim);
 		anim = GetComponent<Animator>();
+		Console.Write(anim);
 	}
 
 	// Update is called once per frame

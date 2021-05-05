@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
 	public Rigidbody rb;
 	float speed = 4;	
-	float rotSpeed = 120;
+	float rotSpeed = 360;
 	float rot = 0;
 	float gravity = 8;
 
@@ -20,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		rb.useGravity = true;   
 		controller = GetComponent<CharacterController> ();
-		anim = GetComponent<Animator> ();     
+		anim = GetComponent<Animator> ();
 	}
 
 	// Update is called once per frame
@@ -32,12 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Movement()
 	{
-		if (anim.GetBool("attacking") || anim.GetBool("defending"))
-		{
-			// Don't move while attacking
-			return;
-		}
-		else
+		if (!anim.GetBool("attacking") && !anim.GetBool("defending"))
 		{
 			if(controller.isGrounded)
 			{
@@ -115,13 +111,18 @@ public class PlayerMovement : MonoBehaviour
 			{
 				anim.SetBool("walking", false);
 				anim.SetBool("running", false);
-				anim.SetInteger("condition", 0); // Idle animation
+				// anim.SetInteger("condition", 0); // Idle animation
 				moveDir = Vector3.zero;
 			}
 			// If left mouse is pressed, it'll attack as long as it's not walking
 			if (Input.GetMouseButtonDown(0))
 			{
-				Attack();
+				System.Console.Write("Pressed");
+				if (!anim.GetBool("attacking"))
+				{
+					Attack();
+					Console.Write("Attacked");
+				}
 			}
 			// If right mouse is pressed, it'll defend as long as it's not walking
 			if (Input.GetMouseButton(1))
@@ -141,7 +142,9 @@ public class PlayerMovement : MonoBehaviour
 
 	void Attack()
 	{
-		StartCoroutine(AttackRoutine());
+		anim.SetTrigger(Animator.StringToHash("Attack01"));
+		Console.Write("attack!");
+		// StartCoroutine(AttackRoutine());
 	}
 
 	IEnumerator AttackRoutine()
@@ -149,10 +152,12 @@ public class PlayerMovement : MonoBehaviour
 		anim.SetBool("attacking", true);
 		anim.SetInteger("condition", 2); // Attacking animation
 
-		yield return new WaitForSeconds(0.9f);
+		// yield return new WaitForSeconds(1.25f);
+		anim.SetTrigger(Animator.StringToHash("Attack01"));
 
 		anim.SetInteger("condition", 0);
 		anim.SetBool("attacking", false);
+	
 	}
 
 	/* end of attacking */
