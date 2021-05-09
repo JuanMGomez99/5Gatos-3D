@@ -142,18 +142,18 @@ public class PlayerMovement : MonoBehaviour
 
 	void Attack()
 	{
-		anim.SetTrigger(Animator.StringToHash("Attack01"));
+		// anim.SetTrigger(Animator.StringToHash("Attack01"));
 		Console.Write("attack!");
-		// StartCoroutine(AttackRoutine());
+		StartCoroutine(AttackRoutine());
 	}
-
+	
 	IEnumerator AttackRoutine()
 	{
 		anim.SetBool("attacking", true);
 		anim.SetInteger("condition", 2); // Attacking animation
 
-		// yield return new WaitForSeconds(1.25f);
-		anim.SetTrigger(Animator.StringToHash("Attack01"));
+		yield return new WaitForSeconds(1.25f);
+		// anim.SetTrigger(Animator.StringToHash("Attack01"));
 
 		anim.SetInteger("condition", 0);
 		anim.SetBool("attacking", false);
