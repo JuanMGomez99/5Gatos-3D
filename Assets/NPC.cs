@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class NPC : MonoBehaviour
 	public float rotSpeed = 0.1f; 
 	public float movSpeed = 0.04f;  
 	static Animator anim;
+	public Slider healthBar;
 
 	// Start is called before the first frame update
 	void Start()
@@ -18,6 +20,8 @@ public class NPC : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{	
+		if(healthBar.value <= 0) return;
+
 		Vector3 direction = player.position - this.transform.position;
 		float angle = Vector3.Angle(direction, this.transform.forward);
 
