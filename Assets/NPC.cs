@@ -8,7 +8,7 @@ public class NPC : MonoBehaviour
 	public Transform player;
 	public float rotSpeed = 0.1f; 
 	public float movSpeed = 0.04f;  
-	static Animator anim;
+	public Animator anim;
 	public Slider healthBar;
 
 	// Start is called before the first frame update
