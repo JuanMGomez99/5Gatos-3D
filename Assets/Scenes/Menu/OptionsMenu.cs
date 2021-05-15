@@ -12,5 +12,24 @@ public class OptionsMenu : MonoBehaviour
 	    float volume = go.GetComponent<Slider>().value;
 	    mixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
 	}
+
+	public Dropdown resSelector;
+	void Start () {
+		resSelector.onValueChanged.AddListener(delegate {
+			ResSelected(resSelector);
+		});
+	}
+	private void ResSelected(Dropdown selector) {
+		ScreenResolution(selector.value);
+	}
+	
+	public void ScreenResolution(int option) {
+		Debug.Log(option);
+		if (option == 0) {
+			Screen.fullScreen = true;
+		} else if (option == 1) {
+			Screen.SetResolution(720, 480, false);
+		}
+	}
 	
 }
