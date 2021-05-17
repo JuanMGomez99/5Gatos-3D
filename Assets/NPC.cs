@@ -10,6 +10,8 @@ public class NPC : MonoBehaviour
 	public float movSpeed = 0.04f;  
 	public Animator anim;
 	public Slider healthBar;
+	private float nextAttack = 0.0f;
+	private float attactRate = 3.0f;
 
 	// Start is called before the first frame update
 	void Start()
@@ -40,9 +42,16 @@ public class NPC : MonoBehaviour
 				anim.SetBool("is_walking", true);
 				anim.SetBool("is_attacking", false);
 			}
-			else
+			else if (Time.time > nextAttack)
 			{
 				anim.SetBool("is_attacking", true);
+				anim.SetBool("is_walking", false);
+				nextAttack = Time.time + attactRate;
+			}
+			else
+			{
+				anim.SetBool("is_idle", true);
+				anim.SetBool("is_attacking", false);
 				anim.SetBool("is_walking", false);
 			}
 		}
