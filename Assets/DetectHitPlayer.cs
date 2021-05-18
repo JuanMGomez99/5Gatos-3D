@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DetectHitPlayer : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class DetectHitPlayer : MonoBehaviour
 				anim.SetBool("dead", true);
 				rb.isKinematic = true;
 				rb.detectCollisions = false;
+				Invoke("LoadGameOver", 3);
 			}
 		}
 
@@ -36,6 +38,11 @@ public class DetectHitPlayer : MonoBehaviour
 		{
 			healthBar.value += 20;
 		}
+	}
+
+	void LoadGameOver()
+	{
+		SceneManager.LoadScene(5);
 	}
 
 }
