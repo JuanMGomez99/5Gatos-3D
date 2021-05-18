@@ -15,6 +15,11 @@ public class OptionsMenu : MonoBehaviour
 
 	public Dropdown resSelector;
 	void Start () {
+		if (Screen.fullScreen == false)
+		{
+			resSelector.value = 1;
+		}
+
 		resSelector.onValueChanged.AddListener(delegate {
 			ResSelected(resSelector);
 		});
