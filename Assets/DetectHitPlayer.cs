@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DetectHitEnemy : MonoBehaviour
+public class DetectHitPlayer : MonoBehaviour
 {
 	public Slider healthBar;
 	public Transform player;
 	Animator anim;
 	public Rigidbody rb;
+
 
 	// Start is called before the first frame update
 	void Start()
@@ -19,16 +20,21 @@ public class DetectHitEnemy : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.name.Equals("weapon_coll"))
+		if (other.gameObject.name.Equals("shpaga_coll"))
 		{
 			healthBar.value -= 10;
 
 			if(healthBar.value <= 0)
 			{
-				anim.SetBool("is_dead", true);
+				anim.SetBool("dead", true);
 				rb.isKinematic = true;
 				rb.detectCollisions = false;
 			}
+		}
+
+		if (other.gameObject.name.Equals("Pill"))
+		{
+			healthBar.value += 20;
 		}
 	}
 
