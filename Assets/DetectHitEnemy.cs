@@ -29,6 +29,9 @@ public class DetectHitEnemy : MonoBehaviour
 				rb.isKinematic = true;
 				rb.detectCollisions = false;
 			}
+
+			string audioName = healthBar.value <= 0 ? "EnemyDeath" : "EnemyHit";
+			FindObjectOfType<AudioManager>().Play(audioName);
 		}
 	}
 

@@ -32,11 +32,16 @@ public class DetectHitPlayer : MonoBehaviour
 				rb.detectCollisions = false;
 				Invoke("LoadGameOver", 3);
 			}
+
+			string audioName = healthBar.value <= 0 ? "PlayerDeath" : "PlayerHit";
+			FindObjectOfType<AudioManager>().Play(audioName);
 		}
+
 
 		if (other.gameObject.name.Equals("Pill"))
 		{
 			healthBar.value += 20;
+			FindObjectOfType<AudioManager>().Play("Pill");
 		}
 	}
 

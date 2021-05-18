@@ -92,6 +92,8 @@ public class PlayerMovement : MonoBehaviour
 
 					Vector3 jumpDir = Vector3.up * speed;
 					moveDir += jumpDir;
+
+					FindObjectOfType<AudioManager>().Play("Jump");
 				}
 
 			}
