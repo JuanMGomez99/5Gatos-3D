@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class PlayerMovement : MonoBehaviour
 {
+	public Slider healthBar;
 	public Rigidbody rb;
 	float speed = 4;	
 	float rotSpeed = 360;
@@ -27,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{	
+		if(healthBar.value <= 0) return;
+
 		Movement();
 		GetInput();
 	}
@@ -106,7 +110,6 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if(controller.isGrounded)
 		{
-
 			if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
 			{
 				anim.SetBool("walking", false);

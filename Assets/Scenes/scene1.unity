@@ -884,6 +884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e76db1d4fcc6ca992178a1ac057cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 736589684}
   rb: {fileID: 114597844}
 --- !u!1001 &159043707
 PrefabInstance:
