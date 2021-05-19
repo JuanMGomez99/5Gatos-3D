@@ -21,6 +21,7 @@ public class DetectHitPlayer : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
+		Debug.Log(other.gameObject.name);
 		if (other.gameObject.name.Equals("shpaga_coll"))
 		{
 			healthBar.value -= 10;
@@ -38,7 +39,7 @@ public class DetectHitPlayer : MonoBehaviour
 		}
 
 
-		if (other.gameObject.name.Equals("Pill"))
+		if (other.gameObject.name.StartsWith("Pill"))
 		{
 			healthBar.value += 20;
 			FindObjectOfType<AudioManager>().Play("Pill");
