@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4653052093463129222
+--- !u!1 &659087473627503749
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4653052093463129220}
-  - component: {fileID: 4653052093463129221}
+  - component: {fileID: 659087473627503771}
+  - component: {fileID: 659087473627503748}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4653052093463129220
+--- !u!4 &659087473627503771
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4653052093463129222}
+  m_GameObject: {fileID: 659087473627503749}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,22 +31,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4653052093463129221
+--- !u!114 &659087473627503748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4653052093463129222}
+  m_GameObject: {fileID: 659087473627503749}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c895535f1e673224db07bb34d5df9ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 24300002, guid: d2c7f4c491408bec2bcd6c7eb798b2c8, type: 2}
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: b3514f2f82730214d946dbf6ed92a094, type: 3}
-    volume: 0.6
+    volume: 1
+    pitch: 1.3
+    loop: 1
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 692793a97083f904ca4a7d4905beeff0, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: PlayerHit
+    clip: {fileID: 8300000, guid: 090e29d0717d8cd4abca5657f936dafe, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: 980e01403f0f2f7438402d0a7f331cea, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyHit
+    clip: {fileID: 8300000, guid: d0ed6430d28a4474c91c7fa64b42dcec, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 7022397844146fc429e6db35e25558ed, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pill
+    clip: {fileID: 8300000, guid: cb7b07b2968936d47ad558bab9250a62, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  volume: 0.9

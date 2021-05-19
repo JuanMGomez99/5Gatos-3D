@@ -16,6 +16,10 @@ public class OptionsMenu : MonoBehaviour
 
 	public Dropdown resSelector;
 	void Start () {
+		GameObject go = transform.Find("VolumeSlider").gameObject;
+		go.GetComponent<Slider>().value = 0.5F;
+		mixer.SetFloat("MusicVolume", Mathf.Log10(0.5F) * 20);
+		
 		if (Screen.fullScreen == false)
 		{
 			resSelector.value = 1;
