@@ -11,7 +11,8 @@ public class DetectHitPlayer : MonoBehaviour
 	Animator anim;
 	public Rigidbody rb;
 
-
+	private float timeElapsed = 2;
+	
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -19,11 +20,23 @@ public class DetectHitPlayer : MonoBehaviour
 		rb = GetComponent<Rigidbody>();
 	}
 
+	void Update() {
+		timeElapsed += Time.deltaTime;
+	}
+
 	void OnTriggerEnter(Collider other)
 	{
+<<<<<<< HEAD
 		if (other.gameObject.name.Equals("shpaga_coll"))
 		{
 			enemy = other.gameObject.transform.parent.parent.parent;
+=======
+		Debug.Log(other.gameObject.name);
+		if (other.gameObject.name.Equals("shpaga_coll") & timeElapsed > 2)
+		{
+			timeElapsed = 0;
+			healthBar.value -= 10;
+>>>>>>> 877e6008a21df900722320d27d0d9418d019dfb9
 
 			if (enemy.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("musketeer_attack"))
 			{
