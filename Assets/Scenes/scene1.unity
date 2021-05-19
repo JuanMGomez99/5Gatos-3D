@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.39013848, g: 0.45704085, b: 0.5719204, a: 1}
+  m_IndirectSpecularColor: {r: 0.39013755, g: 0.45703977, b: 0.5719197, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 11218f863f114a24283afb5b71581f57, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -11460,7 +11460,7 @@ GameObject:
   - component: {fileID: 1971643726}
   - component: {fileID: 1971643725}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Main Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11517,7 +11517,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -12154,8 +12154,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092301676}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.58, y: 0.24, z: -66.46}
-  m_LocalScale: {x: 4.5276437, y: 1.3985, z: 6.124556}
+  m_LocalPosition: {x: -31.64, y: 0.24, z: -67.43}
+  m_LocalScale: {x: 6.055879, y: 1.3985, z: 9.40626}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 119
