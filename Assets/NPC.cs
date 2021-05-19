@@ -14,12 +14,15 @@ public class NPC : MonoBehaviour
 	public float attackRate = 3.0f;
 	public int attacks = 1;
 	private int attackCount = 1;
+	public int range = 10;
+	private int attackRange = 2;
 	// private Collider weapon;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		anim = GetComponent<Animator>();
+		attackCount = attacks;
 	}
 
 	// Update is called once per frame
@@ -31,7 +34,7 @@ public class NPC : MonoBehaviour
 		float angle = Vector3.Angle(direction, this.transform.forward);
 
 		// Change npc behaivour if the player is near and inside the visible range
-		if(Vector3.Distance(player.position, this.transform.position) < 10 && angle < 90)
+		if(Vector3.Distance(player.position, this.transform.position) < range && angle < 90)
 		{
 			direction.y = 0;
 
@@ -39,7 +42,7 @@ public class NPC : MonoBehaviour
 			this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), rotSpeed);
 
 			anim.SetBool("is_idle", false);
-			if(direction.magnitude > 2)
+			if(direction.magnitude > attackRange)
 			{
 				this.transform.Translate(0,0,movSpeed);
 				anim.SetBool("is_walking", true);

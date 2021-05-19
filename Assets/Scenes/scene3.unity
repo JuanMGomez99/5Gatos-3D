@@ -1492,8 +1492,8 @@ MonoBehaviour:
   healthBar: {fileID: 2068812248}
   enemy: {fileID: 0}
   rb: {fileID: 0}
-  pillValue: 20
-  damageReceived: 10
+  pillValue: 35
+  damageReceived: 15
 --- !u!136 &114597846
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6400,6 +6400,7 @@ MonoBehaviour:
   healthBar: {fileID: 247955465}
   attackRate: 2
   attacks: 1
+  range: 15
 --- !u!65 &481617477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7527,6 +7528,7 @@ MonoBehaviour:
   healthBar: {fileID: 580486281}
   attackRate: 2
   attacks: 3
+  range: 10
 --- !u!114 &566818777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11658,6 +11660,7 @@ MonoBehaviour:
   healthBar: {fileID: 2038896141}
   attackRate: 2
   attacks: 1
+  range: 10
 --- !u!65 &854727611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12849,6 +12852,7 @@ MonoBehaviour:
   healthBar: {fileID: 674944663}
   attackRate: 2.5
   attacks: 1
+  range: 10
 --- !u!114 &951978446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14706,13 +14710,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d474e9ddc248bb00a89b2f46ac87622b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 114597843}
   rotSpeed: 0.1
   movSpeed: 0.04
   anim: {fileID: 0}
   healthBar: {fileID: 465601650}
   attackRate: 2.5
   attacks: 1
+  range: 10
 --- !u!114 &1053898193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15786,6 +15791,7 @@ MonoBehaviour:
   healthBar: {fileID: 995439493}
   attackRate: 2
   attacks: 1
+  range: 10
 --- !u!65 &1126876941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16829,6 +16835,7 @@ MonoBehaviour:
   healthBar: {fileID: 427488900}
   attackRate: 2
   attacks: 1
+  range: 10
 --- !u!65 &1179100510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22508,6 +22515,7 @@ MonoBehaviour:
   healthBar: {fileID: 720856194}
   attackRate: 2
   attacks: 1
+  range: 10
 --- !u!65 &1622661907
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27313,6 +27321,7 @@ MonoBehaviour:
   healthBar: {fileID: 177269593}
   attackRate: 2
   attacks: 1
+  range: 10
 --- !u!65 &1965963278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28676,6 +28685,7 @@ MonoBehaviour:
   healthBar: {fileID: 1499253021}
   attackRate: 2.5
   attacks: 1
+  range: 10
 --- !u!114 &2066688172
 MonoBehaviour:
   m_ObjectHideFlags: 0
