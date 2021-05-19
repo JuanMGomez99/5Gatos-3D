@@ -19,15 +19,18 @@ public class DetectHitSat : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("ola1");
 		if (other.gameObject.name.Equals("weapon_coll"))
 		{
-			Debug.Log("ola");
-			healthBar.value -= 10;
+			player = other.gameObject.transform.parent.parent.parent.parent;
 
-			if(healthBar.value <= 0)
+			if (player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
 			{
-				Invoke("LoadVictory", 3);
+				healthBar.value -= 10;
+
+				if(healthBar.value <= 0)
+				{
+					Invoke("LoadVictory", 3);
+				}
 			}
 		}
 	}
