@@ -12,11 +12,13 @@ public class NPC : MonoBehaviour
 	public Slider healthBar;
 	private float nextAttack = 0.0f;
 	private float attactRate = 3.0f;
+	// private Collider weapon;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		anim = GetComponent<Animator>();
+		// weapon = this.transform.Find("root").transform.Find("shpaga").transform.Find("shpaga_coll").gameObject.GetComponent<Collider>();
 	}
 
 	// Update is called once per frame
@@ -61,6 +63,5 @@ public class NPC : MonoBehaviour
 			anim.SetBool("is_attacking", false);
 			anim.SetBool("is_walking", false);
 		}
-
 	}
 }

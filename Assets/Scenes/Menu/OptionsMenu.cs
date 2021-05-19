@@ -7,10 +7,11 @@ using UnityEngine.Audio;
 public class OptionsMenu : MonoBehaviour
 {
 	public AudioMixer mixer;
+
 	public void VolumeChanged() {
 		GameObject go = transform.Find("VolumeSlider").gameObject;
-	    float volume = go.GetComponent<Slider>().value;
-	    mixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
+	   	float volume = go.GetComponent<Slider>().value;
+	    	mixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
 	}
 
 	public Dropdown resSelector;
