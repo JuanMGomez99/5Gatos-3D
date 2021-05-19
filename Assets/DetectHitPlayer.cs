@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class DetectHitPlayer : MonoBehaviour
 {
 	public Slider healthBar;
-	public Transform player;
+	public Transform enemy;
 	Animator anim;
 	public Rigidbody rb;
 
@@ -21,21 +21,25 @@ public class DetectHitPlayer : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log(other.gameObject.name);
 		if (other.gameObject.name.Equals("shpaga_coll"))
 		{
-			healthBar.value -= 10;
+			enemy = other.gameObject.transform.parent.parent.parent;
 
-			if(healthBar.value <= 0)
+			if (enemy.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("musketeer_attack"))
 			{
-				anim.SetBool("dead", true);
-				rb.isKinematic = true;
-				rb.detectCollisions = false;
-				Invoke("LoadGameOver", 3);
-			}
+				healthBar.value -= 5;
 
-			string audioName = healthBar.value <= 0 ? "PlayerDeath" : "PlayerHit";
-			FindObjectOfType<AudioManager>().Play(audioName);
+				if(healthBar.value <= 0)
+				{
+					anim.SetBool("dead", true);
+					rb.isKinematic = true;
+					rb.detectCollisions = false;
+					Invoke("LoadGameOver", 3);
+				}
+
+				string audioName = healthBar.value <= 0 ? "PlayerDeath" : "PlayerHit";
+				FindObjectOfType<AudioManager>().Play(audioName);
+			}
 		}
 
 

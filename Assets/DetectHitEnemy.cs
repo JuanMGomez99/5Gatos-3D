@@ -21,17 +21,22 @@ public class DetectHitEnemy : MonoBehaviour
 	{
 		if (other.gameObject.name.Equals("weapon_coll"))
 		{
-			healthBar.value -= 10;
+			player = other.gameObject.transform.parent.parent.parent.parent;
 
-			if(healthBar.value <= 0)
+			if (player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
 			{
-				anim.SetBool("is_dead", true);
-				rb.isKinematic = true;
-				rb.detectCollisions = false;
-			}
+				healthBar.value -= 10;
 
-			string audioName = healthBar.value <= 0 ? "EnemyDeath" : "EnemyHit";
-			FindObjectOfType<AudioManager>().Play(audioName);
+				if(healthBar.value <= 0)
+				{
+					anim.SetBool("is_dead", true);
+					rb.isKinematic = true;
+					rb.detectCollisions = false;
+				}
+
+				string audioName = healthBar.value <= 0 ? "EnemyDeath" : "EnemyHit";
+				FindObjectOfType<AudioManager>().Play(audioName);
+			}
 		}
 	}
 

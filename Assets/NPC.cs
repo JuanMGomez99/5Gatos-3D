@@ -18,7 +18,6 @@ public class NPC : MonoBehaviour
 	void Start()
 	{
 		anim = GetComponent<Animator>();
-		// weapon = this.transform.Find("root").transform.Find("shpaga").transform.Find("shpaga_coll").gameObject.GetComponent<Collider>();
 	}
 
 	// Update is called once per frame
