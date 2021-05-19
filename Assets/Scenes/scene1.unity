@@ -503,6 +503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 696522424}
   player: {fileID: 0}
+  damageReceived: 35
   rb: {fileID: 0}
 --- !u!4 &40001248 stripped
 Transform:
@@ -858,6 +859,8 @@ MonoBehaviour:
   healthBar: {fileID: 736589684}
   enemy: {fileID: 0}
   rb: {fileID: 0}
+  pillValue: 40
+  damageReceived: 10
 --- !u!136 &114597846
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1098,6 +1101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 494792966}
   player: {fileID: 0}
+  damageReceived: 35
   rb: {fileID: 0}
 --- !u!114 &181570216
 MonoBehaviour:
@@ -7337,6 +7341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1918339933}
   player: {fileID: 0}
+  damageReceived: 35
   rb: {fileID: 0}
 --- !u!114 &1306647631
 MonoBehaviour:
@@ -8334,6 +8339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2001165471}
   player: {fileID: 0}
+  damageReceived: 35
   rb: {fileID: 0}
 --- !u!65 &1519774158
 BoxCollider:
@@ -9809,6 +9815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1740419035}
   player: {fileID: 0}
+  damageReceived: 35
   rb: {fileID: 0}
 --- !u!65 &1707543480
 BoxCollider:
@@ -10834,6 +10841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1006683549}
   player: {fileID: 0}
+  damageReceived: 35
   rb: {fileID: 0}
 --- !u!114 &1878568178
 MonoBehaviour:

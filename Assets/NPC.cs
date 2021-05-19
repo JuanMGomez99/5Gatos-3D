@@ -11,7 +11,7 @@ public class NPC : MonoBehaviour
 	public Animator anim;
 	public Slider healthBar;
 	private float nextAttack = 0.0f;
-	private float attactRate = 3.0f;
+	public float attactRate = 3.0f;
 	// private Collider weapon;
 
 	// Start is called before the first frame update

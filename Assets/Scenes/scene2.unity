@@ -1362,6 +1362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1898364033}
   player: {fileID: 0}
+  damageReceived: 25
   rb: {fileID: 0}
 --- !u!114 &108482352
 MonoBehaviour:
@@ -1380,6 +1381,7 @@ MonoBehaviour:
   movSpeed: 0.04
   anim: {fileID: 0}
   healthBar: {fileID: 1898364033}
+  attactRate: 3
 --- !u!65 &108482353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1468,6 +1470,8 @@ MonoBehaviour:
   healthBar: {fileID: 592371139}
   enemy: {fileID: 0}
   rb: {fileID: 0}
+  pillValue: 35
+  damageReceived: 10
 --- !u!136 &114597846
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4503,6 +4507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1799724059}
   player: {fileID: 0}
+  damageReceived: 25
   rb: {fileID: 0}
 --- !u!114 &331538412
 MonoBehaviour:
@@ -4521,6 +4526,7 @@ MonoBehaviour:
   movSpeed: 0.04
   anim: {fileID: 0}
   healthBar: {fileID: 1799724059}
+  attactRate: 2
 --- !u!65 &331538413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6038,19 +6044,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.05085244
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9987062
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6058,7 +6064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 185.83
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -7469,6 +7475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1464459367}
   player: {fileID: 0}
+  damageReceived: 10
   rb: {fileID: 0}
 --- !u!114 &618185937
 MonoBehaviour:
@@ -7487,6 +7494,7 @@ MonoBehaviour:
   movSpeed: 0.04
   anim: {fileID: 0}
   healthBar: {fileID: 1464459367}
+  attactRate: 3
 --- !u!65 &618185938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9027,6 +9035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1712773595}
   player: {fileID: 0}
+  damageReceived: 25
   rb: {fileID: 0}
 --- !u!114 &755368018
 MonoBehaviour:
@@ -9045,6 +9054,7 @@ MonoBehaviour:
   movSpeed: 0.04
   anim: {fileID: 0}
   healthBar: {fileID: 1712773595}
+  attactRate: 2
 --- !u!65 &755368019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9229,6 +9239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 87456460}
   player: {fileID: 0}
+  damageReceived: 25
   rb: {fileID: 0}
 --- !u!114 &761380133
 MonoBehaviour:
@@ -9247,6 +9258,7 @@ MonoBehaviour:
   movSpeed: 0.04
   anim: {fileID: 0}
   healthBar: {fileID: 87456460}
+  attactRate: 2
 --- !u!65 &761380134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10525,6 +10537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 547989290}
   player: {fileID: 0}
+  damageReceived: 25
   rb: {fileID: 0}
 --- !u!114 &831817415
 MonoBehaviour:
@@ -10543,6 +10556,7 @@ MonoBehaviour:
   movSpeed: 0.04
   anim: {fileID: 0}
   healthBar: {fileID: 547989290}
+  attactRate: 3
 --- !u!65 &831817416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12184,6 +12198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2138066187}
   player: {fileID: 0}
+  damageReceived: 20
   rb: {fileID: 0}
 --- !u!114 &990678020
 MonoBehaviour:
@@ -12202,6 +12217,7 @@ MonoBehaviour:
   movSpeed: 0.04
   anim: {fileID: 0}
   healthBar: {fileID: 2138066187}
+  attactRate: 3
 --- !u!65 &990678021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16317,6 +16333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 680874263}
   player: {fileID: 0}
+  damageReceived: 20
   rb: {fileID: 0}
 --- !u!114 &1254396090
 MonoBehaviour:
@@ -16335,6 +16352,7 @@ MonoBehaviour:
   movSpeed: 0.04
   anim: {fileID: 0}
   healthBar: {fileID: 680874263}
+  attactRate: 3
 --- !u!65 &1254396091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21988,6 +22006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1664203375}
   player: {fileID: 0}
+  damageReceived: 25
   rb: {fileID: 0}
 --- !u!114 &1738622970
 MonoBehaviour:
@@ -22006,6 +22025,7 @@ MonoBehaviour:
   movSpeed: 0.04
   anim: {fileID: 0}
   healthBar: {fileID: 1664203375}
+  attactRate: 3
 --- !u!65 &1738622971
 BoxCollider:
   m_ObjectHideFlags: 0
