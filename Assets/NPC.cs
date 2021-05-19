@@ -11,7 +11,9 @@ public class NPC : MonoBehaviour
 	public Animator anim;
 	public Slider healthBar;
 	private float nextAttack = 0.0f;
-	public float attactRate = 3.0f;
+	public float attackRate = 3.0f;
+	public int attacks = 1;
+	private int attackCount = 1;
 	// private Collider weapon;
 
 	// Start is called before the first frame update
@@ -47,7 +49,16 @@ public class NPC : MonoBehaviour
 			{
 				anim.SetBool("is_attacking", true);
 				anim.SetBool("is_walking", false);
-				nextAttack = Time.time + attactRate;
+				attackCount -= 1;
+				if (attackCount == 0)
+				{
+					nextAttack = Time.time + attackRate;
+					attackCount = attacks;
+				}
+				else
+				{
+					nextAttack = Time.time;
+				}
 			}
 			else
 			{
