@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91369376682d5b942bbcc8d4b0f74114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 0}
+  mixer: {fileID: 24100000, guid: d2c7f4c491408bec2bcd6c7eb798b2c8, type: 2}
   resSelector: {fileID: 1809944194}
 --- !u!1 &1054211256
 GameObject:
@@ -3205,6 +3205,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4653052093463129221, guid: 6f3123ecf2e713e468224a4d97f3a3e7, type: 3}
+      propertyPath: mixer
+      value: 
+      objectReference: {fileID: 24300002, guid: d2c7f4c491408bec2bcd6c7eb798b2c8, type: 2}
     - target: {fileID: 4653052093463129221, guid: 6f3123ecf2e713e468224a4d97f3a3e7, type: 3}
       propertyPath: volume
       value: 1

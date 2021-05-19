@@ -7,7 +7,7 @@ using UnityEngine;
 */
 public class AudioManager : MonoBehaviour
 {
-
+    public AudioMixerGroup mixer;
     public Sound[] sounds;
 
     public static AudioManager instance;
@@ -35,6 +35,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            s.source.outputAudioMixerGroup = mixer;
         }
         
     }
