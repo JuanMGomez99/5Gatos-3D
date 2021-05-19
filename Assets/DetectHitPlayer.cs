@@ -11,6 +11,7 @@ public class DetectHitPlayer : MonoBehaviour
 	Animator anim;
 	public Rigidbody rb;
 
+	private float initialHeight;
 	private float timeElapsed = 2;
 	
 	// Start is called before the first frame update
@@ -18,9 +19,14 @@ public class DetectHitPlayer : MonoBehaviour
 	{
 		anim = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody>();
+		initialHeight = transform.position.y;
 	}
 
 	void Update() {
+		Debug.Log(transform.position.y);
+		if (transform.position.y < (initialHeight - 10)) {
+			LoadGameOver();
+		}
 		timeElapsed += Time.deltaTime;
 	}
 
