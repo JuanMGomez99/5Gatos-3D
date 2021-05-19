@@ -11,7 +11,8 @@ public class DetectHitPlayer : MonoBehaviour
 	Animator anim;
 	public Rigidbody rb;
 
-
+	private float timeElapsed = 2;
+	
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -19,11 +20,16 @@ public class DetectHitPlayer : MonoBehaviour
 		rb = GetComponent<Rigidbody>();
 	}
 
+	void Update() {
+		timeElapsed += Time.deltaTime;
+	}
+
 	void OnTriggerEnter(Collider other)
 	{
 		Debug.Log(other.gameObject.name);
-		if (other.gameObject.name.Equals("shpaga_coll"))
+		if (other.gameObject.name.Equals("shpaga_coll") & timeElapsed > 2)
 		{
+			timeElapsed = 0;
 			healthBar.value -= 10;
 
 			if(healthBar.value <= 0)
