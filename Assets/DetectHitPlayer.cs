@@ -25,6 +25,7 @@ public class DetectHitPlayer : MonoBehaviour
 	void Update() {
 		Debug.Log(transform.position.y);
 		if (transform.position.y < (initialHeight - 10)) {
+			FindObjectOfType<AudioManager>().Play("PlayerDeath");
 			LoadGameOver();
 		}
 		timeElapsed += Time.deltaTime;
