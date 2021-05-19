@@ -26,32 +26,30 @@ public class DetectHitPlayer : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-<<<<<<< HEAD
 		if (other.gameObject.name.Equals("shpaga_coll"))
 		{
 			enemy = other.gameObject.transform.parent.parent.parent;
-=======
-		Debug.Log(other.gameObject.name);
-		if (other.gameObject.name.Equals("shpaga_coll") & timeElapsed > 2)
-		{
-			timeElapsed = 0;
-			healthBar.value -= 10;
->>>>>>> 877e6008a21df900722320d27d0d9418d019dfb9
 
-			if (enemy.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("musketeer_attack"))
+			if (other.gameObject.name.Equals("shpaga_coll") & timeElapsed > 2)
 			{
-				healthBar.value -= 5;
+				timeElapsed = 0;
+				healthBar.value -= 10;
 
-				if(healthBar.value <= 0)
+				if (enemy.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("musketeer_attack"))
 				{
-					anim.SetBool("dead", true);
-					rb.isKinematic = true;
-					rb.detectCollisions = false;
-					Invoke("LoadGameOver", 3);
-				}
+					healthBar.value -= 5;
 
-				string audioName = healthBar.value <= 0 ? "PlayerDeath" : "PlayerHit";
-				FindObjectOfType<AudioManager>().Play(audioName);
+					if(healthBar.value <= 0)
+					{
+						anim.SetBool("dead", true);
+						rb.isKinematic = true;
+						rb.detectCollisions = false;
+						Invoke("LoadGameOver", 3);
+					}
+
+					string audioName = healthBar.value <= 0 ? "PlayerDeath" : "PlayerHit";
+					FindObjectOfType<AudioManager>().Play(audioName);
+				}
 			}
 		}
 
