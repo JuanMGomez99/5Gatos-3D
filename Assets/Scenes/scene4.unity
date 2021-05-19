@@ -2942,7 +2942,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.1
-  m_Text: The antena is here! Quickly destroy it!
+  m_Text: There's an antena!!! Tofe must destroy it >_<
 --- !u!222 &229326849
 CanvasRenderer:
   m_ObjectHideFlags: 0
