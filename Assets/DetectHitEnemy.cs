@@ -7,6 +7,7 @@ public class DetectHitEnemy : MonoBehaviour
 {
 	public Slider healthBar;
 	public Transform player;
+	public int damageReceived = 10;
 	Animator anim;
 	public Rigidbody rb;
 
@@ -25,7 +26,7 @@ public class DetectHitEnemy : MonoBehaviour
 
 			if (player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
 			{
-				healthBar.value -= 10;
+				healthBar.value -= damageReceived;
 
 				if(healthBar.value <= 0)
 				{

@@ -11,6 +11,9 @@ public class DetectHitPlayer : MonoBehaviour
 	Animator anim;
 	public Rigidbody rb;
 
+	public int pillValue = 20;
+	public int damageReceived = 10;	
+
 	private float initialHeight;
 	private float timeElapsed = 2;
 	
@@ -40,11 +43,10 @@ public class DetectHitPlayer : MonoBehaviour
 			if (other.gameObject.name.Equals("shpaga_coll") & timeElapsed > 2)
 			{
 				timeElapsed = 0;
-				healthBar.value -= 10;
 
 				if (enemy.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("musketeer_attack"))
 				{
-					healthBar.value -= 5;
+					healthBar.value -= damageReceived;
 
 					if(healthBar.value <= 0)
 					{
@@ -63,7 +65,7 @@ public class DetectHitPlayer : MonoBehaviour
 
 		if (other.gameObject.name.StartsWith("Pill"))
 		{
-			healthBar.value += 20;
+			healthBar.value += pillValue;
 			FindObjectOfType<AudioManager>().Play("Pill");
 		}
 	}
