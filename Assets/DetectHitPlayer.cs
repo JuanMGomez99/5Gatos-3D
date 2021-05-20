@@ -46,6 +46,8 @@ public class DetectHitPlayer : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
+		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Defend")) return;
+  
 		if (other.gameObject.name.Equals("shpaga_coll"))
 		{
 			enemy = other.gameObject.transform.parent.parent.parent;
