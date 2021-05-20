@@ -10,7 +10,7 @@ using UnityEngine.Audio;
 public class OptionsMenu : MonoBehaviour
 {
 	public AudioMixer mixer;
-
+	private Resolution[] resolutions;
 	public void VolumeChanged() {
 		GameObject go = transform.Find("VolumeSlider").gameObject;
 	   	float volume = go.GetComponent<Slider>().value;
@@ -20,13 +20,18 @@ public class OptionsMenu : MonoBehaviour
 	public Dropdown resSelector;
 	void Start () {
 		GameObject go = transform.Find("VolumeSlider").gameObject;
-		go.GetComponent<Slider>().value = 0.5F;
-		mixer.SetFloat("MusicVolume", Mathf.Log10(0.5F) * 20);
-		
-		if (Screen.fullScreen == false)
-		{
-			resSelector.value = 1;
+		go.GetComponent<Slider>().value = 1F;
+		mixer.SetFloat("MusicVolume", Mathf.Log10(1F) * 20);
+		resolutions = Screen.resolutions;
+		resSelector.options.Clear();
+		resSelector.options.Add(new Dropdown.OptionData("FullScreen"));
+		foreach (var res in resolutions) {
+			string option = res.width + "x" + res.height;
+			resSelector.options.Add(new Dropdown.OptionData(option));
 		}
+		
+		resSelector.value = 1;
+		Screen.fullScreen = true;
 
 		resSelector.onValueChanged.AddListener(delegate {
 			ResSelected(resSelector);
@@ -39,9 +44,10 @@ public class OptionsMenu : MonoBehaviour
 	public void ScreenResolution(int option) {
 		Debug.Log(option);
 		if (option == 0) {
-			Screen.SetResolution(1920, 1080, true);
-		} else if (option == 1) {
-			Screen.SetResolution(720, 480, false);
+			Screen.SetResolution(Screen.width, Screen.height, true);
+		} else {
+			var resolution = resolutions[option - 1];
+			Screen.SetResolution(resolution.width, resolution.height, false);
 		}
 	}
 	
