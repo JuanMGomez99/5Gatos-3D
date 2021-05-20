@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
+/*
+    MainMenu class that contains the behaivour for the options menu
+*/
 public class OptionsMenu : MonoBehaviour
 {
 	public AudioMixer mixer;

@@ -14790,7 +14790,7 @@ MonoBehaviour:
   movSpeed: 0.04
   anim: {fileID: 0}
   healthBar: {fileID: 465601650}
-  attackRate: 2.5
+  attackRate: 2
   attacks: 1
   range: 10
 --- !u!114 &1053898193

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+    MainMenu class that contains the behaivour for loading or exiting the game
+*/
 public class MainMenu : MonoBehaviour
 {
 	public void PlayGame()
@@ -12,7 +15,7 @@ public class MainMenu : MonoBehaviour
 
 	public void ExitGame()
 	{
-		Debug.Log("exit");
+		//Debug.Log("exit");
 		Application.Quit();
 	}
 }
