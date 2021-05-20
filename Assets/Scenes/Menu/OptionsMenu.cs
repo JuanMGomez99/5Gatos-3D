@@ -11,6 +11,8 @@ public class OptionsMenu : MonoBehaviour
 {
 	public AudioMixer mixer;
 	private Resolution[] resolutions;
+	private int w;
+	private int h;
 	public void VolumeChanged() {
 		GameObject go = transform.Find("VolumeSlider").gameObject;
 	   	float volume = go.GetComponent<Slider>().value;
@@ -31,6 +33,8 @@ public class OptionsMenu : MonoBehaviour
 		}
 		
 		resSelector.value = 0;
+		w = Screen.width;
+		h = Screen.height;
 
 		resSelector.onValueChanged.AddListener(delegate {
 			ResSelected(resSelector);
@@ -43,7 +47,7 @@ public class OptionsMenu : MonoBehaviour
 	public void ScreenResolution(int option) {
 		Debug.Log(option);
 		if (option == 0) {
-			Screen.SetResolution(Screen.width, Screen.height, true);
+			Screen.SetResolution(w, h, true);
 		} else {
 			var resolution = resolutions[option - 1];
 			Screen.SetResolution(resolution.width, resolution.height, false);
