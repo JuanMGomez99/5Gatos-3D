@@ -39,7 +39,7 @@ public class OptionsMenu : MonoBehaviour
 	public void ScreenResolution(int option) {
 		Debug.Log(option);
 		if (option == 0) {
-			Screen.fullScreen = true;
+			Screen.SetResolution(1920, 1080, true);
 		} else if (option == 1) {
 			Screen.SetResolution(720, 480, false);
 		}
