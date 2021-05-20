@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+    SceneSwitch class that loads the next scene when a collision happens 
+*/
 public class SceneSwitch : MonoBehaviour
 {
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Actual scene: " + SceneManager.GetActiveScene().buildIndex);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 }

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+    DetectHitEnemy class that contains the behaivour of the enemy and how it reacts to collisions
+*/
 public class DetectHitEnemy : MonoBehaviour
 {
 	public Slider healthBar;

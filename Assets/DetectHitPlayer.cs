@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/*
+    DetectHitPlayer class that contains the behaivour of the player and how it reacts to collisions
+*/
 public class DetectHitPlayer : MonoBehaviour
 {
 	public Slider healthBar;
@@ -26,6 +29,7 @@ public class DetectHitPlayer : MonoBehaviour
 		rb = GetComponent<Rigidbody>();
 		initialHeight = transform.position.y;
 		
+		// load health value from memory if it's not the scene 1
 		if (!SceneManager.GetActiveScene().name.Equals("scene1"))
 		{
 			health = PlayerPrefs.GetFloat("PlayerHealth");	
@@ -34,20 +38,21 @@ public class DetectHitPlayer : MonoBehaviour
 	}
 
 	void Update() {
-		//Debug.Log(transform.position.y);
 		if (transform.position.y < (initialHeight - 10)) {
 			FindObjectOfType<AudioManager>().Play("PlayerDeath");
 			LoadGameOver();
 		}
 		timeElapsed += Time.deltaTime;
-
+		
+		// the health value is stored in memory 
 		PlayerPrefs.SetFloat("PlayerHealth", health);
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Defend")) return;
-  
+		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Defend")) return;	// if the player is on defend no damage is inflicted
+  		
+		// case: collides with enemy weapon
 		if (other.gameObject.name.Equals("shpaga_coll"))
 		{
 			enemy = other.gameObject.transform.parent.parent.parent;
@@ -74,8 +79,7 @@ public class DetectHitPlayer : MonoBehaviour
 				}
 			}
 		}
-
-
+		// case: collides with pill
 		if (other.gameObject.name.StartsWith("Pill"))
 		{
 			healthBar.value += pillValue;
