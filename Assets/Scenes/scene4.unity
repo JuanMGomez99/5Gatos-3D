@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08132649, g: 0.10759745, b: 0.15583664, a: 1}
+  m_IndirectSpecularColor: {r: 0.08132642, g: 0.10759733, b: 0.15583634, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &3023238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &34111532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2576,7 +2576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &204117087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3470,7 +3470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &299428201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3798,7 +3798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &328339160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6790,7 +6790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &721918509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7428,7 +7428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &758146022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7647,7 +7647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &779838071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8128,7 +8128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &822233544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9122,7 +9122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &904518852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10608,7 +10608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &1090527200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11934,7 +11934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &1182721041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12490,7 +12490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &1202220135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13986,7 +13986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &1294744540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14869,7 +14869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &1408130253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15391,7 +15391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &1475700795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16145,7 +16145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &1553280486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17763,7 +17763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.22822645, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.14901961, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18311,6 +18311,7 @@ RectTransform:
   m_Children:
   - {fileID: 1750425354}
   - {fileID: 1581380486}
+  - {fileID: 2088682237}
   m_Father: {fileID: 1169215357}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18880,7 +18881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &1826409647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20825,7 +20826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c5cb6be5fe76a5b8290c7384051b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1563411393}
 --- !u!114 &2070096560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21419,6 +21420,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085684154}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2088682236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088682237}
+  - component: {fileID: 2088682239}
+  - component: {fileID: 2088682238}
+  m_Layer: 5
+  m_Name: Heart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2088682237
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088682236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.29951, y: 0.2995088, z: 0.2995088}
+  m_Children: []
+  m_Father: {fileID: 1773559155}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -78.3, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2088682238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088682236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9a375783f978b6ccf962f67afd5394ce, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2088682239
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088682236}
+  m_CullTransparentMesh: 1
 --- !u!1001 &2094714611
 PrefabInstance:
   m_ObjectHideFlags: 0

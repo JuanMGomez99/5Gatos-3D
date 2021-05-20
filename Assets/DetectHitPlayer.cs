@@ -16,6 +16,8 @@ public class DetectHitPlayer : MonoBehaviour
 
 	private float initialHeight;
 	private float timeElapsed = 2;
+
+	private float health = 100;
 	
 	// Start is called before the first frame update
 	void Start()
@@ -23,15 +25,23 @@ public class DetectHitPlayer : MonoBehaviour
 		anim = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody>();
 		initialHeight = transform.position.y;
+		
+		if (!SceneManager.GetActiveScene().name.Equals("scene1"))
+		{
+			health = PlayerPrefs.GetFloat("PlayerHealth");	
+			healthBar.value = health;	
+		}
 	}
 
 	void Update() {
-		Debug.Log(transform.position.y);
+		//Debug.Log(transform.position.y);
 		if (transform.position.y < (initialHeight - 10)) {
 			FindObjectOfType<AudioManager>().Play("PlayerDeath");
 			LoadGameOver();
 		}
 		timeElapsed += Time.deltaTime;
+
+		PlayerPrefs.SetFloat("PlayerHealth", health);
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -47,6 +57,7 @@ public class DetectHitPlayer : MonoBehaviour
 				if (enemy.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("musketeer_attack"))
 				{
 					healthBar.value -= damageReceived;
+					health = healthBar.value;
 
 					if(healthBar.value <= 0)
 					{
