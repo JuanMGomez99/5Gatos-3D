@@ -31,6 +31,11 @@ public class PlayerMovement : MonoBehaviour
 	{	
 		if(healthBar.value <= 0) return;
 
+		if (Input.GetKey(KeyCode.Escape))
+		{
+			Application.Quit();
+		}
+
 		Movement();
 		GetInput();
 	}

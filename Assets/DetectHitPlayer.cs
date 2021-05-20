@@ -18,7 +18,7 @@ public class DetectHitPlayer : MonoBehaviour
 	public int damageReceived = 10;	
 
 	private float initialHeight;
-	private float timeElapsed = 2;
+	private float timeElapsed = 1;
 
 	private float health = 100;
 	
@@ -57,7 +57,7 @@ public class DetectHitPlayer : MonoBehaviour
 		{
 			enemy = other.gameObject.transform.parent.parent.parent;
 
-			if (other.gameObject.name.Equals("shpaga_coll") & timeElapsed >= 2)
+			if (other.gameObject.name.Equals("shpaga_coll") & timeElapsed >= 1)
 			{
 				timeElapsed = 0;
 
